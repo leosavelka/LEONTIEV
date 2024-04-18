@@ -59,12 +59,19 @@
             <div class="form_block">
                 <div class="left-side">
                     <form id="blck" type="text">
-                        <input type="text" class="field_form" id="name" placeholder="Имя" required oninput="validateName()"/><br>
-                        <input type="text" class="field_form" id="surname" placeholder="Фамилия" required oninput="validateSurname()"/><br>
-                        <input type="tel" class="field_form" id="phone" placeholder="Номер телефона" required oninput="validatePhone()"/><br>
-                        <input type="text" class="field_form" id="city" placeholder="Город" required oninput="validateCity()"/><br> 
-                        <input type="datetime-local" class="field_form" id="date-time" placeholder="Дата и время" required oninput="validateDateTime()"/><br>
-                        <input type="number" class="field_form" id="quantity" placeholder="Количество" min="1" max="9999999999999999999999" required oninput="validateQuantity()"/><br>
+                        <span id="summary"></span> <br>
+                        <input type="text" class="field_form" id="name" placeholder="Имя" required oninput="validateName()"/>
+                        <span id="name"></span> <br>
+                        <input type="text" class="field_form" id="surname" placeholder="Фамилия" required oninput="validateSurname()"/>
+                        <span id="surname"></span> <br>
+                        <input type="tel" class="field_form" id="phone" placeholder="Номер телефона" required oninput="validatePhone()"/>
+                        <span id="phone"></span> <br>
+                        <input type="text" class="field_form" id="city" placeholder="Город" required oninput="validateCity()"/>
+                        <span id="city"></span> <br>
+                        <input type="datetime-local" class="field_form" id="date-time" placeholder="Дата и время" required oninput="validateDateTime()"/>
+                        <span id="date-time"></span> <br>
+                        <input type="number" class="field_form" id="quantity" placeholder="Количество" min="1" max="9999999999999999999999" required oninput="validateQuantity()"/>
+                        <span id="quantity"></span> <br>
                         <button type="button" class="button" onclick="submitProductOrderForm(event)" disabled>Отправить заказ</button>
                     </form>
                 </div>
