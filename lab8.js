@@ -19,9 +19,11 @@ function submitProductOrderForm(event) {
 
         document.getElementById("summaryContent").innerHTML = summaryHtml;
         document.getElementById("summaryBlock").style.display = 'block';
+        document.getElementById("summary").style.display = "none";
+        
     } else {
         document.getElementById("summary").style.color = "red";
-        document.getElementById("summary").innerHTML = "Please, fill in all the fields with valid inputs";
+        document.getElementById("summary").innerHTML = "Пожалуйста, введите корректные данные";
         const text = document.getElementById("hidden");
         text.style.display = "block";
     }
@@ -47,11 +49,11 @@ function validateName() {
     var regex = /^[a-zA-Z\u0400-\u04FF\s]{2,15}$/;
     if (regex.test(name)) {
         document.getElementById("name").style.color = "green";
-        document.getElementById("name").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("name").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("name").style.color = "red";
-        document.getElementById("name").nextElementSibling.innerHTML = "Please, enter 2-15 characters";
+        document.getElementById("name").nextElementSibling.innerHTML = "Введите имя (ввод на кириллице или латинице)";
         return false;
     }
 }
@@ -61,11 +63,11 @@ function validateSurname() {
     var regex = /^[a-zA-Z\u0400-\u04FF\s]{2,15}$/;
     if (regex.test(surname)) {
         document.getElementById("surname").style.color = "green";
-        document.getElementById("surname").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("surname").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("surname").style.color = "red";
-        document.getElementById("surname").nextElementSibling.innerHTML = "Please, enter 2-20 characters";
+        document.getElementById("surname").nextElementSibling.innerHTML = "Введите фамилию (ввод на кириллице или латинице)";
         return false;
     }
 }
@@ -75,11 +77,11 @@ function validatePhone() {
     var regex = /^\+?[0-9]{4,15}$/;
     if (regex.test(phone)) {
         document.getElementById("phone").style.color = "green";
-        document.getElementById("phone").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("phone").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("phone").style.color = "red";
-        document.getElementById("phone").nextElementSibling.innerHTML = "Invalid phone number";
+        document.getElementById("phone").nextElementSibling.innerHTML = "Введите номер телефона (от 4 цифр)";
         return false;
     }
 }
@@ -89,11 +91,11 @@ function validateCity() {
     var regex = /^[a-zA-Z\u0400-\u04FF\s]{2,2000}$/;
     if (regex.test(city)) {
         document.getElementById("city").style.color = "green";
-        document.getElementById("city").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("city").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("city").style.color = "red";
-        document.getElementById("city").nextElementSibling.innerHTML = "Please enter a valid address";
+        document.getElementById("city").nextElementSibling.innerHTML = "Введите город (ввод на кириллице или латинице)";
         return false;
     }
 }
@@ -102,11 +104,11 @@ function validateDateTime() {
     var dateTime = document.getElementById("date-time").value;
     if (dateTime !== '') {
         document.getElementById("date-time").style.color = "green";
-        document.getElementById("date-time").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("date-time").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("date-time").style.color = "red";
-        document.getElementById("date-time").nextElementSibling.innerHTML = "Please select a date and time";
+        document.getElementById("date-time").nextElementSibling.innerHTML = "Выберите дату";
         return false;
     }
 }
@@ -115,11 +117,11 @@ function validateQuantity() {
     var quantity = document.getElementById("quantity").value;
     if (quantity >= 1) {
         document.getElementById("quantity").style.color = "green";
-        document.getElementById("quantity").nextElementSibling.innerHTML = "Correct input";
+        document.getElementById("quantity").nextElementSibling.innerHTML = "Корректно";
         return true;
     } else {
         document.getElementById("quantity").style.color = "red";
-        document.getElementById("quantity").nextElementSibling.innerHTML = "Quantity must be at least 1";
+        document.getElementById("quantity").nextElementSibling.innerHTML = "Количество должно быть больше нуля";
         return false;
     }
 }
